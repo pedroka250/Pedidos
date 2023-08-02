@@ -1,11 +1,22 @@
 package devandroid.kauamatheus.listadepedidos.Model;
 
-public class Pedido {
+public class Item {
 
     private String nome;
+    private int qntd;
     private double preco;
 
-    public Pedido(String nome, double preco) {
+    public Item(){
+
+    }
+
+    public Item(String nome, double preco, int qntd) {
+        this.nome = nome;
+        this.preco = preco;
+        this.qntd = qntd;
+    }
+
+    public Item(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
     }
@@ -18,6 +29,14 @@ public class Pedido {
         this.nome = nome;
     }
 
+    public int getQntd() {
+        return qntd;
+    }
+
+    public void setQntd(int qntd) {
+        this.qntd = qntd;
+    }
+
     public double getPreco() {
         return preco;
     }
@@ -28,6 +47,6 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return nome +": R$"+ preco;
+        return nome +": R$"+ preco + qntd;
     }
 }

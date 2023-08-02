@@ -3,19 +3,19 @@ package devandroid.kauamatheus.listadepedidos.Controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import devandroid.kauamatheus.listadepedidos.Model.Pedido;
+import devandroid.kauamatheus.listadepedidos.Model.Item;
 
 public class ListaItensController {
 
     private List listaItens;
 
     public List getListaItens() {
-        listaItens = new ArrayList<Pedido>();
+        listaItens = new ArrayList<Item>();
 
-        listaItens.add(new Pedido("Sabão em pó", 25.50));
-        listaItens.add(new Pedido("Achocolatado", 9.90));
-        listaItens.add(new Pedido("Maça", 2.5));
-        listaItens.add(new Pedido("Ervilha", 6.49));
+        listaItens.add(new Item("Sabão em pó", 25.50));
+        listaItens.add(new Item("Achocolatado", 9.90));
+        listaItens.add(new Item("Maça", 2.5,1));
+        listaItens.add(new Item("Ervilha", 6.49));
 
         return listaItens;
     }
@@ -23,7 +23,7 @@ public class ListaItensController {
         ArrayList<String> itens = new ArrayList<>();
 
         for (int i = 0; i < getListaItens().size();i++){
-            Pedido objeto = (Pedido) getListaItens().get(i);
+            Item objeto = (Item) getListaItens().get(i);
 
             itens.add(objeto.getNome());
             itens.add(String.valueOf(objeto.getPreco()));

@@ -109,25 +109,94 @@
                         android:layout_weight="1"
                         android:backgroundTint="#3F51B4"
                         android:text="Adicionar à cesta" />
+
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Pedidos na cesta:"
-                    android:textColor="@color/laranja"
-                    android:textStyle="bold" />
 
-                <androidx.recyclerview.widget.RecyclerView
+                <LinearLayout
+                    android:id="@+id/linear_itenslistas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp" >
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
 
-                </androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="12dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/TextViewNome"
+                                    android:layout_width="217dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Nome"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewQntd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Qtnd"
+                                    android:text="Qntd"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewTotal"
+                                    android:layout_width="95dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:hint="Total"
+                                    android:text="Total"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/darker_gray" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/activity_order_item"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -135,4 +204,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

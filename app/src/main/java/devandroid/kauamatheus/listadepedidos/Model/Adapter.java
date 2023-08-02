@@ -1,24 +1,26 @@
 package devandroid.kauamatheus.listadepedidos.Model;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 import devandroid.kauamatheus.listadepedidos.R;
 
-public class order_item extends RecyclerView.Adapter<order_item.RecyclerTesteViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerTesteViewHolder> {
 
     public static Interface.ClickRecyclerView_Interface clickRecyclerViewInterface;
     Context mctx;
     private List<Item> mList;
 
-    public order_item(Context ctx, List<Item> list, Interface.ClickRecyclerView_Interface clickRecyclerViewInterface) {
+    public Adapter(Context ctx, List<Item> list, Interface.ClickRecyclerView_Interface clickRecyclerViewInterface) {
         this.mctx = ctx;
         this.mList = list;
         this.clickRecyclerViewInterface = clickRecyclerViewInterface;
@@ -32,9 +34,10 @@ public class order_item extends RecyclerView.Adapter<order_item.RecyclerTesteVie
 
     @Override
     public void onBindViewHolder(RecyclerTesteViewHolder viewHolder, int i) {
-        Item pedido = mList.get(i);
+        Item item = mList.get(i);
 
-        viewHolder.viewNome.setText(pedido.getNome());
+        viewHolder.viewNome.setText(item.getNome());
+        viewHolder.viewQntd.setText(item.ge);
 
     }
 
@@ -47,7 +50,7 @@ public class order_item extends RecyclerView.Adapter<order_item.RecyclerTesteVie
     protected class RecyclerTesteViewHolder extends RecyclerView.ViewHolder {
 
         protected TextView viewNome;
-
+        protected TextView viewQntd;
 
         public RecyclerTesteViewHolder(final View itemView) {
             super(itemView);

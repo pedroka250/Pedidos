@@ -36,14 +36,17 @@
                         android:layout_width="217dp"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
-                        android:hint="nome"
-                        android:textSize="14dp" />
+                        android:text="Produto"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Qtnd" />
+                        android:hint="Qtnd"
+                        android:text="Qntd"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textViewTotal"
@@ -52,7 +55,8 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="10dp"
                         android:layout_weight="1"
-                        android:hint="Total" />
+                        android:text="Total"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
