@@ -37,7 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerTesteViewHolde
         Item item = mList.get(i);
 
         viewHolder.viewNome.setText(item.getNome());
-        viewHolder.viewQntd.setText(item.ge);
+        viewHolder.viewQntd.setText(item.getQntd());
 
     }
 

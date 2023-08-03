@@ -23,17 +23,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="@string/supermercado_bahamas"
-                android:textColor="#FF5722"
+                android:text="Lista Pedidos"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="158dp"
-                android:layout_height="124dp"
-                android:layout_marginTop="30dp"
-                app:srcCompat="@drawable/cesta_de_compras" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,7 +46,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
                         android:text="@string/itens_disponiveis"
-                        android:textColor="#FE5722"
+                        android:textColor="#000000"
                         android:textStyle="bold"
                         tools:ignore="InefficientWeight" />
 
@@ -63,7 +56,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#3F51B5" />
+                        android:backgroundTint="#3F51B5"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
 
@@ -79,8 +73,14 @@
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="Qual produto?"
-                        android:inputType="textPersonName" />
+                        android:hint="Insira o produto"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <Space
+                        android:layout_width="28dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1" />
 
                     <EditText
                         android:id="@+id/editQuantidade"
@@ -88,8 +88,9 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="150dp"
                         android:ems="10"
-                        android:hint="Qntd"
-                        android:inputType="textPersonName" />
+                        android:hint="0"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -107,8 +108,8 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="50dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#3F51B4"
-                        android:text="Adicionar à cesta" />
+                        android:backgroundTint="#000000"
+                        android:text="Adicionar nA lista" />
 
                 </LinearLayout>
 
@@ -127,13 +128,23 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="6"
+                            android:background="#F30000"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
-                            android:paddingLeft="12dp">
+                            android:paddingLeft="12dp"
+                            tools:ignore="Suspicious0dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -146,17 +157,24 @@
                                     android:layout_width="217dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginRight="10dp"
+                                    android:background="#FF0000"
+                                    android:backgroundTint="#F30000"
+                                    android:fontFamily="serif"
                                     android:text="Nome"
+                                    android:textColor="#FFFFFF"
                                     android:textSize="14dp"
-                                    android:textStyle="bold" />
+                                    android:textStyle="italic" />
 
                                 <TextView
                                     android:id="@+id/textViewQntd"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:backgroundTint="#F30000"
+                                    android:fontFamily="serif"
                                     android:hint="Qtnd"
                                     android:text="Qntd"
-                                    android:textStyle="bold" />
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="italic" />
 
                                 <TextView
                                     android:id="@+id/textViewTotal"
@@ -165,26 +183,20 @@
                                     android:layout_marginLeft="30dp"
                                     android:layout_marginRight="10dp"
                                     android:layout_weight="1"
+                                    android:fontFamily="serif"
                                     android:hint="Total"
                                     android:text="Total"
-                                    android:textStyle="bold" />
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="italic" />
 
                             </LinearLayout>
 
                         </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="38dp"
-                        android:gravity="bottom"
-                        android:orientation="vertical">
-
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@android:color/darker_gray" />
+                            android:layout_height="38dp"
+                            android:background="#7C132B" />
 
                     </LinearLayout>
 
