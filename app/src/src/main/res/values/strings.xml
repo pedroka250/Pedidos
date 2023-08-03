@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ListaDePedidos</string>
+    <string name="Text_Titulo_Supermercado_Bahamas">Supermercado Bahamas</string>
+    <string name="supermercado_bahamas">Supermercado Bahamas</string>
+    <string name="itens_disponiveis">Itens disponiveis:</string>
+</resources>
